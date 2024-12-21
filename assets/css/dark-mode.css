@@ -1,0 +1,44 @@
+
+:root:has(.mode input:checked){
+    --color-defult: #fff;
+    --color-secondry: #fff;
+    --color-tertiary: #9f9f9f;
+    --clor-light-gray: #252525;
+    --primary-hue:35;
+    --primary-saturation: 44%;
+    --primary-lightnss: 72%;  
+    --light-hue:0;
+    --light-saturation:0%;
+    --light-lightnss: 9%;
+   
+}
+
+
+body:has(.mode input:checked){
+background-color: #202020;
+}
+body:has(.mode input:checked) .chef-cards picture::before{
+    background-image: url(../images/team-shape-dark.svg);
+}
+
+
+body:not(:has(:target)):has(.mode input:checked) .home-link,
+body:has(.home:target):has(.mode input:checked) .home-link,
+body:has(.chefs:target) :has(.mode input:checked) .chefs-link,
+body:has(.gallary:target):has(.mode input:checked) .gallary-link,
+body:has(.contact:target):has(.mode input:checked) .contact-link
+{
+   color: white;
+}
+
+body:has(.mode input:checked) nav a:hover{
+    color: white;
+}
+
+body:has(.mode input:checked) .mode .light{
+    display: block;
+}
+
+body:has(.mode input:checked) .mode .dark{
+    display: none;
+}
